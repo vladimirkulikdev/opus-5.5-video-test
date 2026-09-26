@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>SINGULARITY · ML anticheat · video</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<style>
+  html,body{margin:0;background:#000;color:#fff;font-family:Menlo,Consolas,monospace;height:100%}
+  #wrap{display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:100%;gap:12px}
+  canvas{width:min(96vw,calc(86vh*16/9));height:auto;aspect-ratio:16/9;background:#000;border:1px solid #222}
+  #ui{display:flex;gap:10px;align-items:center;font-size:13px}
+  button{background:#000;color:#fff;border:1px solid #666;padding:6px 12px;font-family:inherit;cursor:pointer}
+  button:hover{border-color:#fff}
+  input[type=range]{width:420px;accent-color:#fff}
+  body.render #ui{display:none}
+  body.render #wrap{display:block}
+  body.render canvas{width:1920px;height:1080px;border:0}
+</style>
+</head>
+<body>
+<div id="wrap">
+  <canvas id="c" width="1920" height="1080"></canvas>
+  <div id="ui">
+    <button id="play">Pause</button>
+    <button id="restart">Restart</button>
+    <input id="scrub" type="range" min="0" max="1000" value="0">
+    <span id="time">0.00s</span>
+    <button id="rec">Record WebM</button>
+  </div>
+</div>
+<script src="src/sim.js"></script>
+<script src="src/video.js"></script>
+<script src="src/player.js"></script>
+</body>
+</html>
