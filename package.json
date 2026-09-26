@@ -1,0 +1,13 @@
+{
+  "name": "opus-5.5-video-test",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Monochrome JavaScript explainer video for Singularity, a machine-learning anticheat for Minecraft.",
+  "scripts": {
+    "render": "node scripts/render.mjs singularity.mp4 60"
+  },
+  "devDependencies": {
+    "puppeteer": "^23.0.0"
+  }
+}
